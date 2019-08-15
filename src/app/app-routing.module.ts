@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'listado-fabricantes', //home por defecto para que se muestre primero
     pathMatch: 'full'
   },
   {
@@ -14,7 +14,12 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+  },
+  { path: 'listado-fabricantes', loadChildren: './pages/listado-fabricantes/listado-fabricantes.module#ListadoFabricantesPageModule' },
+  { path: 'vehiculos', loadChildren: './pages/vehiculos/vehiculos.module#VehiculosPageModule' },
+  { path: 'movies', loadChildren: './pages/movies/movies.module#MoviesPageModule' },
+  { path: 'movies/:id', loadChildren: './pages/movie-details/movie-details.module#MovieDetailsPageModule' },
+  { path: 'users', loadChildren: './pages/users/users.module#UsersPageModule' }
 ];
 
 @NgModule({

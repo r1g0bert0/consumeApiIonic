@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>listadoFabricantes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let fabricante of fabricantes">
+    <ion-card-header (click)=verVehiculos(fabricante.id)>
+      <ion-card-title>{{ fabricante.id }}</ion-card-title>
+      <ion-card-title>{{ fabricante.nombre }}</ion-card-title>
+      <ion-card-title>{{ fabricante.telefono}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <div>
+    <button>Hello</button>
+  </div>
+</ion-content>

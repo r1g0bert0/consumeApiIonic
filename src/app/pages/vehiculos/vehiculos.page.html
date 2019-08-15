@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>vehiculos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card *ngFor="let vehiculo of vehiculos">
+        <ion-card-header>
+          <ion-card-title>{{ vehiculo.color }}</ion-card-title>
+          <ion-card-title>{{ vehiculo.potencia}}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+</ion-content>
