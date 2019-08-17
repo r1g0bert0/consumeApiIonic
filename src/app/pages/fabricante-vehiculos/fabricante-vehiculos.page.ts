@@ -16,16 +16,15 @@ export class FabricanteVehiculosPage implements OnInit {
 
   ngOnInit() {
     const idF = this.route.snapshot.paramMap.get('id');
-    // this.vehiculosService.verVehiculos().subscribe(vehiculosFab => {
-    //   this.vehiculoDeFabricante = vehiculosFab.find(vehiculosFab.id);
-    //   console.log(vehiculos);
-    // }
-    // var found = array1.find(function(element) {
-    //   return element > 10;
-    // });   
+    this.vehiculosService.verVehiculos().subscribe(vehiculosFab => {
+      this.vehiculoDeFabricante = vehiculosFab;
+      console.log(this.vehiculoDeFabricante);
+    });   
   }
 
-
+ 
+    // var found = array1.find(function(element) {
+    // return element > 10;
    
    // greaterTen = numbers.filter(number => number > 10 ); // return implicito
   // console.log(greaterTen);
