@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class VehiculosService {
-
+  vehiculosService = [];
   constructor(
     private http: HttpClient
   ) { }
@@ -15,4 +15,7 @@ export class VehiculosService {
   verVehiculos(): Observable<Vehiculo[]>{
     return this.http.get<Vehiculo[]>("http://localhost:8000/vehiculos");//http://localhost:8000/fabricantes/2/vehiculos
   }
+ 
+  // greaterTen = numbers.filter(number => number > 10 ); // return implicito
+  // console.log(greaterTen);
 }

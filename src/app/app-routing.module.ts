@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'vehiculos', loadChildren: './pages/vehiculos/vehiculos.module#VehiculosPageModule' },
   { path: 'movies', loadChildren: './pages/movies/movies.module#MoviesPageModule' },
   { path: 'movies/:id', loadChildren: './pages/movie-details/movie-details.module#MovieDetailsPageModule' },
-  { path: 'users', loadChildren: './pages/users/users.module#UsersPageModule' }
+  { path: 'users', loadChildren: './pages/users/users.module#UsersPageModule' },
+  { path: 'fabri/:id', loadChildren: './pages/fabricante-vehiculos/fabricante-vehiculos.module#FabricanteVehiculosPageModule' }
 ];
 
 @NgModule({

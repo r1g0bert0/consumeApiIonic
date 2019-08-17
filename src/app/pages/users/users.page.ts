@@ -16,6 +16,7 @@ export class UsersPage implements OnInit {
         .subscribe(respuesta => this.usuarios = respuesta)
   }
   buscarUsuario(event) {
-    console.log(event);
+    const texto = event.target.value;
+    console.log(texto);
   }
 }
