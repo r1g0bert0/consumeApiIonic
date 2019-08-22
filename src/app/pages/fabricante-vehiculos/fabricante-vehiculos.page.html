@@ -7,4 +7,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content padding>
+  <ion-card *ngFor="let vehiFabri of vehiculoDeFabricante">
+    <ion-card-header >
+      <ion-card-title>Potencia: {{ vehiFabri.potencia }}</ion-card-title>
+      <ion-card-title>Peso: {{ vehiFabri.peso }}</ion-card-title>
+      <ion-card-title>Color: {{ vehiFabri.color}}</ion-card-title>
+      <ion-card-title>Cilindraje: {{ vehiFabri.cilindraje}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

@@ -15,17 +15,14 @@ export class FabricanteVehiculosPage implements OnInit {
               private vehiculosService: VehiculosService) { }
 
   ngOnInit() {
-    const idF = this.route.snapshot.paramMap.get('id');
-    this.vehiculosService.verVehiculos().subscribe(vehiculosFab => {
-      this.vehiculoDeFabricante = vehiculosFab;
-      console.log(this.vehiculoDeFabricante);
-    });   
+    var idF = this.route.snapshot.paramMap.get('id');
+    var vhis =[];
+    this.vehiculosService.verVehiculos().subscribe((vehiculosFab) => {
+      const result = vehiculosFab.filter( vehi => vehi.fabricante_id == parseInt(idF) ); 
+      console.log(result);
+      this.vehiculoDeFabricante= result;
+    }, (errorObtenido) => {
+      console.log(errorObtenido);
+    })  
   }
-
- 
-    // var found = array1.find(function(element) {
-    // return element > 10;
-   
-   // greaterTen = numbers.filter(number => number > 10 ); // return implicito
-  // console.log(greaterTen);
 }

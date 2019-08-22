@@ -11,13 +11,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { FabricantesService } from './services/fabricantes-service/fabricantes.service';
 // mis importaciones
 import { HttpClientModule } from '@angular/common/http';
-import { FiltroPipe } from './pipe/filtro.pipe';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    FiltroPipe],
+    AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,

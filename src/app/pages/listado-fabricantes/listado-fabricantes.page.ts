@@ -25,9 +25,9 @@ export class ListadoFabricantesPage implements OnInit {
       console.log(errorObtenido);
     })
   }
-  verVehiculos(fabricante: Fabricante){
+  verVehiculos(idF: number){
     //this.route.navigate(['/vehiculos', {fabricante: JSON.stringify(fabricante)}]);
-    this.idFab = fabricante.id;
-    this.route.navigate(["/fabri", this.idFab]);
+   // this.idFab = fabricante.id;
+    this.route.navigate(["/fabri", idF]);
   }
 }

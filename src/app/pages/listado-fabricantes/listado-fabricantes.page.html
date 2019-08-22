@@ -9,7 +9,7 @@
 
 <ion-content padding>
   <ion-card *ngFor="let fabricante of fabricantes">
-    <ion-card-header (click)=verVehiculos(fabricante)>
+    <ion-card-header (click)=verVehiculos(fabricante.id)>
       <ion-card-title>{{ fabricante.id }}</ion-card-title>
       <ion-card-title>{{ fabricante.nombre }}</ion-card-title>
       <ion-card-title>{{ fabricante.telefono}}</ion-card-title>
